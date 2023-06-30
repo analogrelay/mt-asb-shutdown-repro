@@ -39,16 +39,16 @@ namespace ShutdownReproApp
                         x.AddActivities(entryAssembly);
 
                         // Change this to ASB to see the issue
-                        x.UsingInMemory((context, cfg) =>
-                        {
-                            cfg.ConfigureEndpoints(context);
-                        });
-                        // x.UsingAzureServiceBus((context, cfg) =>
+                        // x.UsingInMemory((context, cfg) =>
                         // {
-                        //     var config = context.GetRequiredService<IConfiguration>();
-                        //     cfg.Host(config["AzureServiceBus:ConnectionString"]);
                         //     cfg.ConfigureEndpoints(context);
                         // });
+                        x.UsingAzureServiceBus((context, cfg) =>
+                        {
+                            var config = context.GetRequiredService<IConfiguration>();
+                            cfg.Host(config["AzureServiceBus:ConnectionString"]);
+                            cfg.ConfigureEndpoints(context);
+                        });
                     });
                 });
     }

@@ -26,6 +26,7 @@ namespace ShutdownReproApp
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error publishing response");
+                throw;
             }
         }
     }
