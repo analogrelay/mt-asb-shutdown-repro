@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "mt_asb_shutdown_repro": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

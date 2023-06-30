@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RootNamespace>ShutdownReproApp</RootNamespace>
+    <UserSecretsId>bc5cb1fc-7325-459f-8c41-a6f0f5013c6d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.0.16" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="MassTransit" Version="8.0.16" />
+  </ItemGroup>
+</Project>
